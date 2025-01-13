@@ -1,3 +1,0 @@
-{ 
-    "banknotes": number[] | null
-}
