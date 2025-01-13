@@ -134,6 +134,7 @@ server.post('/withdraw', async (req, res) => {
     const withdraw = (amount) => {
         const sortedBanknotes = getSortedBanknotes();
         const transaction = {};
+        let originalAmount = amount;
 
         for (let [value, count] of sortedBanknotes) {
             const needed = Math.floor(amount / value);
@@ -145,7 +146,7 @@ server.post('/withdraw', async (req, res) => {
             }
         }
 
-        atm.set('balance', atm.get('balance') - amount); // Update ATM balance
+        atm.set('balance', atm.get('balance') - originalAmount); // Update ATM balance
         return transaction;
     };
 
