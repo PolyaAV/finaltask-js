@@ -3,9 +3,15 @@
   "version": "1.0.0",
   "description": "ATM API for managing TDL dollars",
   "main": "index.js",
-  "scripts": {},
+  "type": "module",
+  "scripts": {
+    "start": "node index.js"
+  },
   "keywords": [],
-  "author": "",
+  "author": "Polina Anufrieva",
   "license": "ISC",
-  "dependencies": {}
+  "dependencies": {
+    "express": "^4.21.2",
+    "node-fetch": "^3.3.2"
+  }
 }
